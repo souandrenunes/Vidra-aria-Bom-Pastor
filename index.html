@@ -1,633 +1,352 @@
-# Landing Page Premium — Serralheria & Vidraçaria Bom Pastor
-
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Serralheria & Vidraçaria Bom Pastor</title>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serralheria & Vidraçaria Bom Pastor – Niterói RJ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
 <style>
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-:root{
-  --blue:#16A4DE;
-  --green:#00B050;
-  --dark:#07131f;
-  --dark2:#102131;
-  --white:#ffffff;
-  --gray:#cfcfcf;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:'Montserrat',sans-serif;
-  background:var(--dark);
-  color:white;
-  overflow-x:hidden;
-}
-
-/* HEADER */
-
-header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:999;
-
-  background:rgba(7,19,31,.94);
-  backdrop-filter:blur(10px);
-
-  padding:18px 5vw;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.logo img{
-  height:80px;
-  object-fit:contain;
-}
-
-/* HERO */
-
-.hero{
-  min-height:100vh;
-
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-
-  background:
-  linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.72)),
-  url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop');
-
-  background-size:cover;
-  background-position:center;
-}
-
-.hero-content{
-  padding:170px 7vw 100px;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.hero-badge{
-  display:inline-flex;
-  width:max-content;
-
-  background:rgba(0,176,80,.12);
-  color:#7dffb4;
-
-  border:1px solid rgba(0,176,80,.35);
-
-  padding:10px 18px;
-  border-radius:100px;
-
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:1px;
-
-  margin-bottom:28px;
-}
-
-.hero h1{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(64px,8vw,130px);
-  line-height:.9;
-  letter-spacing:2px;
-
-  margin-bottom:24px;
-}
-
-.hero h1 span{
-  color:var(--blue);
-}
-
-.hero p{
-  max-width:620px;
-
-  font-size:20px;
-  line-height:1.8;
-  color:rgba(255,255,255,.82);
-
-  margin-bottom:40px;
-}
-
-.hero-actions{
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-}
-
-.btn{
-  text-decoration:none;
-  font-weight:700;
-  border-radius:8px;
-
-  padding:18px 34px;
-
-  transition:.3s ease;
-}
-
-.btn:hover{
-  transform:translateY(-4px);
-}
-
-.btn-whatsapp{
-  background:var(--green);
-  color:white;
-
-  box-shadow:0 10px 30px rgba(0,176,80,.25);
-}
-
-.btn-outline{
-  border:1px solid rgba(255,255,255,.18);
-  color:white;
-}
-
-/* HERO RIGHT */
-
-.hero-gallery{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-
-  padding:120px 40px 40px;
-}
-
-.hero-gallery img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-
-  border-radius:14px;
-
-  border:1px solid rgba(255,255,255,.08);
-
-  transition:.4s ease;
-}
-
-.hero-gallery img:hover{
-  transform:scale(1.02);
-}
-
-/* SECTION */
-
-.section{
-  padding:100px 7vw;
-}
-
-.section-label{
-  color:var(--blue);
-  font-weight:700;
-  letter-spacing:2px;
-  font-size:13px;
-
-  margin-bottom:14px;
-}
-
-.section-title{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(50px,5vw,80px);
-  line-height:1;
-
-  margin-bottom:24px;
-}
-
-.section-text{
-  max-width:760px;
-  color:rgba(255,255,255,.76);
-  line-height:1.9;
-  font-size:18px;
-}
-
-/* SERVICES */
-
-.services-grid{
-  margin-top:60px;
-
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
-}
-
-.service-card{
-  background:linear-gradient(180deg,#112131,#0c1724);
-
-  border:1px solid rgba(255,255,255,.05);
-
-  border-radius:18px;
-
-  padding:36px;
-
-  transition:.3s ease;
-}
-
-.service-card:hover{
-  transform:translateY(-6px);
-}
-
-.service-card h3{
-  margin-bottom:16px;
-  font-size:24px;
-}
-
-.service-card p{
-  color:rgba(255,255,255,.72);
-  line-height:1.7;
-}
-
-/* GALLERY */
-
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:18px;
-
-  margin-top:60px;
-}
-
-.gallery img{
-  width:100%;
-  height:320px;
-  object-fit:cover;
-
-  border-radius:18px;
-}
-
-/* CONTACT */
-
-.contact-box{
-  margin-top:50px;
-
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
-}
-
-.contact-card{
-  background:#101d2a;
-  border-radius:18px;
-  padding:32px;
-}
-
-.contact-card h4{
-  margin-bottom:12px;
-  color:var(--blue);
-}
-
-.contact-card p{
-  color:rgba(255,255,255,.76);
-  line-height:1.8;
-}
-
-/* CTA */
-
-.cta{
-  padding:120px 7vw;
-  text-align:center;
-
-  background:
-  linear-gradient(rgba(0,0,0,.78), rgba(0,0,0,.78)),
-  url('https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1600&auto=format&fit=crop');
-
-  background-size:cover;
-  background-position:center;
-}
-
-.cta h2{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(56px,7vw,110px);
-  line-height:.95;
-
-  margin-bottom:26px;
-}
-
-.cta p{
-  max-width:780px;
-  margin:0 auto 40px;
-
-  font-size:20px;
-  line-height:1.8;
-
-  color:rgba(255,255,255,.82);
-}
-
-.cta a{
-  display:inline-block;
-
-  background:var(--green);
-  color:white;
-  text-decoration:none;
-
-  padding:20px 40px;
-  border-radius:10px;
-
-  font-weight:700;
-}
-
-footer{
-  padding:40px 20px;
-  text-align:center;
-
-  color:rgba(255,255,255,.45);
-
-  background:#050d15;
-}
-
-/* MOBILE */
-
-@media(max-width:980px){
-
-.hero{
-  grid-template-columns:1fr;
-}
-
-.hero-content{
-  padding:160px 7vw 70px;
-}
-
-.hero-gallery{
-  padding:0 20px 40px;
-}
-
-.logo img{
-  height:65px;
-}
-
-.hero p{
-  font-size:18px;
-}
-
-}
-
+  :root {
+    --navy:  #0d1f30;
+    --navy2: #122840;
+    --blue:  #29abe2;
+    --blue-dark: #1a7aad;
+    --green: #22b14c;
+    --green-dark: #178039;
+    --cream: #f4f6f4;
+    --white: #ffffff;
+    --gray:  #6b7280;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Barlow', sans-serif; background: var(--navy); color: var(--white); overflow-x: hidden; }
+
+  /* ── HEADER ── */
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(13,31,48,0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 2px solid var(--green);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5vw; height: 68px;
+  }
+  .logo-wrap img { height: 48px; display: block; }
+
+  .header-cta {
+    display: flex; align-items: center; gap: 8px;
+    background: #25d366; color: #fff;
+    font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 14px;
+    letter-spacing: 0.5px; padding: 9px 18px; border-radius: 4px;
+    text-decoration: none; transition: background .2s;
+  }
+  .header-cta:hover { background: #1ebe5d; }
+  .header-cta svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    padding-top: 68px; position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, #0d1f30 0%, #122840 60%, #0a1e2e 100%);
+    z-index: 0;
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 5vw 80px 8vw;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(34,177,76,0.12);
+    border: 1px solid rgba(34,177,76,0.35);
+    color: #5ce88a;
+    font-size: 11px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; padding: 5px 12px; border-radius: 2px;
+    margin-bottom: 24px; width: fit-content;
+  }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(50px, 6vw, 90px); line-height: .95; letter-spacing: 2px;
+    color: var(--white); margin-bottom: 16px;
+  }
+  .hero h1 span { color: var(--blue); display: block; }
+  .hero-desc {
+    font-size: 16px; font-weight: 300; color: rgba(255,255,255,.65);
+    line-height: 1.7; max-width: 420px; margin-bottom: 36px;
+  }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+
+  .btn-whatsapp {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #25d366; color: #fff; font-family: 'Barlow', sans-serif;
+    font-weight: 600; font-size: 14px; padding: 13px 24px; border-radius: 3px;
+    text-decoration: none; transition: background .2s, transform .15s;
+  }
+  .btn-whatsapp:hover { background: #1ebe5d; transform: translateY(-1px); }
+  .btn-phone {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--blue); color: #fff; font-family: 'Barlow', sans-serif;
+    font-weight: 600; font-size: 14px; padding: 13px 24px; border-radius: 3px;
+    text-decoration: none; transition: background .2s, transform .15s;
+  }
+  .btn-phone:hover { background: var(--blue-dark); transform: translateY(-1px); }
+  .btn-whatsapp svg, .btn-phone svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+  .hero-address {
+    display: flex; align-items: flex-start; gap: 8px; margin-top: 28px;
+    font-size: 13px; color: rgba(255,255,255,.42); font-weight: 300; line-height: 1.5;
+  }
+  .hero-address svg { width: 14px; height: 14px; flex-shrink: 0; margin-top: 2px; opacity: .6; }
+
+  .green-line { width: 48px; height: 3px; background: var(--green); margin-bottom: 20px; }
+
+  /* ── HERO PHOTO GRID ── */
+  .hero-photos {
+    position: relative; z-index: 2;
+    display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr 1fr;
+    gap: 3px; overflow: hidden;
+  }
+  .hero-photos .ph { overflow: hidden; position: relative; }
+  .hero-photos .ph img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(.85) saturate(.9); transition: transform .4s ease, filter .3s; }
+  .hero-photos .ph:hover img { transform: scale(1.05); filter: brightness(1) saturate(1); }
+  .hero-photos .ph:first-child { grid-row: span 2; }
+
+  /* ── SERVICES ── */
+  .services { background: var(--cream); color: var(--navy); padding: 80px 8vw; }
+  .section-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--blue-dark); margin-bottom: 10px; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(38px,4vw,58px); letter-spacing: 1px; color: var(--navy); line-height: 1; margin-bottom: 48px; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 20px; }
+  .service-card {
+    background: var(--white); border-radius: 4px; padding: 28px 24px;
+    border-left: 3px solid var(--blue);
+    box-shadow: 0 2px 12px rgba(13,31,48,.07);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .service-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(13,31,48,.13); }
+  .service-card .ico { width: 40px; height: 40px; background: rgba(41,171,226,.1); border-radius: 3px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+  .service-card .ico svg { width: 22px; height: 22px; color: var(--blue); }
+  .service-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 17px; font-weight: 700; letter-spacing: .5px; color: var(--navy); margin-bottom: 6px; text-transform: uppercase; }
+  .service-card p { font-size: 13px; color: var(--gray); line-height: 1.55; }
+
+  /* ── GALLERY ── */
+  .gallery { background: var(--navy2); padding: 80px 8vw; }
+  .gallery .section-label { color: var(--blue); }
+  .gallery .section-title { color: var(--white); }
+  .gallery-grid { display: grid; grid-template-columns: repeat(4,1fr); grid-auto-rows: 200px; gap: 6px; }
+  .g-item { overflow: hidden; border-radius: 2px; position: relative; }
+  .g-item.tall { grid-row: span 2; }
+  .g-item.wide { grid-column: span 2; }
+  .g-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .45s ease; }
+  .g-item:hover img { transform: scale(1.06); }
+  .g-item .overlay { position: absolute; inset: 0; background: rgba(13,31,48,.35); transition: opacity .3s; }
+  .g-item:hover .overlay { opacity: 0; }
+
+  /* ── INFO BAND ── */
+  .info-band {
+    background: var(--green-dark); padding: 48px 8vw;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 32px; flex-wrap: wrap;
+  }
+  .info-item { display: flex; align-items: center; gap: 14px; }
+  .info-item .ico { width: 44px; height: 44px; border-radius: 3px; background: rgba(255,255,255,.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .info-item .ico svg { width: 22px; height: 22px; color: #fff; }
+  .info-item .label { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.65); margin-bottom: 3px; }
+  .info-item .value { font-size: 15px; font-weight: 500; color: #fff; line-height: 1.35; }
+
+  /* ── CTA ── */
+  .cta-section { background: var(--navy); padding: 80px 8vw; text-align: center; border-top: 1px solid rgba(41,171,226,.2); }
+  .cta-section .section-title { color: var(--white); }
+  .cta-section .section-label { color: var(--blue); display: block; }
+  .cta-section p { color: rgba(255,255,255,.5); font-size: 16px; font-weight: 300; max-width: 500px; margin: 0 auto 36px; line-height: 1.7; }
+  .cta-btn-big {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #25d366; color: #fff;
+    font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase; padding: 16px 40px;
+    border-radius: 3px; text-decoration: none; transition: background .2s, transform .15s;
+  }
+  .cta-btn-big:hover { background: #1ebe5d; transform: translateY(-2px); }
+  .cta-btn-big svg { width: 22px; height: 22px; }
+  .phone-big { display: block; margin-top: 18px; font-family: 'Bebas Neue', sans-serif; font-size: 34px; letter-spacing: 3px; color: var(--blue); text-decoration: none; }
+  .phone-big:hover { color: #5cd3f7; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #060f18; padding: 28px 8vw;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,.06);
+  }
+  footer .brand { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 2px; color: var(--white); }
+  footer p { font-size: 12px; color: rgba(255,255,255,.3); }
+  footer img { height: 36px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-photos { height: 260px; grid-template-rows: 1fr 1fr; }
+    .hero-photos .ph:first-child { grid-row: span 1; }
+    .hero-content { padding: 60px 6vw 40px; }
+    .gallery-grid { grid-template-columns: repeat(2,1fr); }
+    .g-item.wide { grid-column: span 1; }
+    .info-band { flex-direction: column; align-items: flex-start; }
+    footer { flex-direction: column; }
+  }
 </style>
 </head>
-
 <body>
 
 <header>
-
-  <div class="logo">
-    <img src="logo.png" alt="Bom Pastor Vidros">
+  <div class="logo-wrap">
+    <img src="logo.png" alt="Serralheria Bom Pastor">
   </div>
-
+  <a href="https://wa.me/5521999999999" class="header-cta" target="_blank">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.742.002-2.596-1.008-5.036-2.844-6.874-1.836-1.837-4.279-2.846-6.88-2.847-5.44 0-9.863 4.373-9.867 9.743-.001 1.745.477 3.444 1.385 4.91l-.988 3.605 3.738-.967zM17.34 14.54c-.292-.144-1.728-.842-1.995-.938-.266-.097-.46-.144-.654.144-.194.288-.753.938-.923 1.13-.17.192-.34.216-.632.072-.292-.144-1.233-.448-2.35-1.432-.869-.765-1.456-1.71-1.626-2.001-.17-.291-.018-.448.128-.591.131-.13.292-.336.438-.504.146-.168.194-.288.292-.48.098-.192.049-.36-.024-.504-.074-.144-.654-1.554-.895-2.13-.236-.56-.474-.485-.654-.494-.17-.008-.364-.01-.559-.01-.194 0-.51.072-.777.36-.266.289-1.02  Benson .984-1.02 2.4 0 1.416 1.045 2.784 1.191 2.976.146.192 2.057 3.102 4.982 4.343.696.295 1.239.472 1.663.605.699.22 1.336.19 1.84.114.56-.084 1.728-.696 1.972-1.368.243-.672.243-1.25.17-1.368-.073-.118-.266-.192-.559-.336z"/></svg>
+    WhatsApp
+  </a>
 </header>
 
-<!-- HERO -->
-
 <section class="hero">
-
   <div class="hero-content">
-
-    <div class="hero-badge">
-      ESPECIALISTAS EM VIDRAÇARIA E SERRALHERIA
-    </div>
-
-    <h1>
-      TRANSFORMAMOS<br>
-      SEU ESPAÇO COM<br>
-      <span>SOFISTICAÇÃO</span>
-    </h1>
-
-    <p>
-      Projetos modernos, acabamento impecável e instalação profissional.
-      A Serralheria & Vidraçaria Bom Pastor entrega qualidade, segurança
-      e elegância para residências, empresas e comércios.
+    <div class="hero-badge">Serralheria & Vidraçaria</div>
+    <h1>Bom Pastor <span>Niterói - RJ</span></h1>
+    <div class="green-line"></div>
+    <p class="hero-desc">
+      Especialistas em estruturas metálicas, portões automáticos, guarda-corpos, coberturas, vidros temperados, boxes para casa de banho e fachadas de vidro. Compromisso com a durabilidade e o acabamento impecável.
     </p>
-
     <div class="hero-actions">
-
-      <a class="btn btn-whatsapp"
-         href="https://wa.me/5521964229902"
-         target="_blank">
-         SOLICITAR ORÇAMENTO
+      <a href="https://wa.me/5521999999999" class="btn-whatsapp" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.742.002-2.596-1.008-5.036-2.844-6.874-1.836-1.837-4.279-2.846-6.88-2.847-5.44 0-9.863 4.373-9.867 9.743-.001 1.745.477 3.444 1.385 4.91l-.988 3.605 3.738-.967zM17.34 14.54c-.292-.144-1.728-.842-1.995-.938-.266-.097-.46-.144-.654.144-.194.288-.753.938-.923 1.13-.17.192-.34.216-.632.072-.292-.144-1.233-.448-2.35-1.432-.869-.765-1.456-1.71-1.626-2.001-.17-.291-.018-.448.128-.591.131-.13.292-.336.438-.504.146-.168.194-.288.292-.48.098-.192.049-.36-.024-.504-.074-.144-.654-1.554-.895-2.13-.236-.56-.474-.485-.654-.494-.17-.008-.364-.01-.559-.01-.194 0-.51.072-.777.36-.266.289-1.02.984-1.02 2.4 0 1.416 1.045 2.784 1.191 2.976.146.192 2.057 3.102 4.982 4.343.696.295 1.239.472 1.663.605.699.22 1.336.19 1.84.114.56-.084 1.728-.696 1.972-1.368.243-.672.243-1.25.17-1.368-.073-.118-.266-.192-.559-.336z"/></svg>
+        Orçamento Grátis
       </a>
-
-      <a class="btn btn-outline"
-         href="#contato">
-         VER ENDEREÇO
+      <a href="tel:+5521999999999" class="btn-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Ligar Agora
       </a>
-
     </div>
-
+    <div class="hero-address">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Atendimento em Niterói, São Gonçalo e Região Metropolitana<br>Rio de Janeiro - RJ
+    </div>
   </div>
 
-  <div class="hero-gallery">
-
-    <!-- SUBSTITUA PELAS SUAS IMAGENS DO POSTIMG -->
-
-    <img src="https://postimg.cc/2Lmtbgt5">
-
-    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop">
-
-    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop">
-
-    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop">
-
+  <div class="hero-photos">
+    <div class="ph"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=600&auto=format&fit=cover" alt="Trabalho em Serralheria"></div>
+    <div class="ph"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600&auto=format&fit=cover" alt="Instalação de Vidros"></div>
+    <div class="ph"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=cover" alt="Estruturas Metálicas"></div>
   </div>
-
 </section>
 
-<!-- SOBRE -->
-
-<section class="section">
-
-  <div class="section-label">
-    SOBRE NÓS
-  </div>
-
-  <h2 class="section-title">
-    QUALIDADE EM CADA DETALHE
-  </h2>
-
-  <p class="section-text">
-    A Serralheria & Vidraçaria Bom Pastor atua com foco em excelência,
-    acabamento premium e instalação profissional.
-    Trabalhamos com projetos personalizados para transformar ambientes
-    residenciais e comerciais com elegância, resistência e sofisticação.
-  </p>
-
-</section>
-
-<!-- SERVIÇOS -->
-
-<section class="section" style="background:#0d1824;">
-
-  <div class="section-label">
-    NOSSOS SERVIÇOS
-  </div>
-
-  <h2 class="section-title">
-    SOLUÇÕES MODERNAS
-    PARA O SEU PROJETO
-  </h2>
-
+<section class="services">
+  <div class="section-label">O que fazemos</div>
+  <h2 class="section-title">Soluções Sob Medida</h2>
   <div class="services-grid">
-
     <div class="service-card">
-      <h3>Box de Vidro</h3>
-      <p>
-        Instalações modernas com acabamento sofisticado para banheiros.
-      </p>
+      <div class="ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+      </div>
+      <h3>Estruturas & Portões</h3>
+      <p>Portões basculantes, deslizantes, grades de proteção e estruturas de ferro com alta resistência mecânica.</p>
     </div>
-
     <div class="service-card">
-      <h3>Portas e Janelas</h3>
-      <p>
-        Projetos personalizados com elegância e durabilidade.
-      </p>
+      <div class="ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 22h20M12 2v20M2 12h20"/></svg>
+      </div>
+      <h3>Vidros Temperados</h3>
+      <p>Instalação de janelas, portas de correr, cortinas de vidro e divisórias elegantes para escritórios e residências.</p>
     </div>
-
     <div class="service-card">
-      <h3>Corrimãos e Guarda-Corpos</h3>
-      <p>
-        Segurança e sofisticação para ambientes internos e externos.
-      </p>
+      <div class="ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4zM4 12h16"/></svg>
+      </div>
+      <h3>Guarda-Corpos & Corrimãos</h3>
+      <p>Segurança técnica em inox, ferro ou vidro para varandas, mezaninos e escadas residenciais ou comerciais.</p>
     </div>
-
     <div class="service-card">
-      <h3>Fachadas Comerciais</h3>
-      <p>
-        Soluções modernas para valorizar a imagem do seu negócio.
-      </p>
+      <div class="ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM9 9h6v6H9z"/></svg>
+      </div>
+      <h3>Boxes de Banheiro</h3>
+      <p>Modelos padrão e engenharia sob medida com perfis modernos em alumínio e roldanas aparentes.</p>
     </div>
-
   </div>
-
 </section>
 
-<!-- GALERIA -->
-
-<section class="section">
-
-  <div class="section-label">
-    NOSSOS PROJETOS
+<section class="gallery">
+  <div class="section-label">Portefólio</div>
+  <h2 class="section-title">Alguns dos Nossos Projetos</h2>
+  <div class="gallery-grid">
+    <div class="g-item tall">
+      <div class="overlay"></div>
+      <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=600&auto=format&fit=cover" alt="Fachada de Vidro Comercial">
+    </div>
+    <div class="g-item wide">
+      <div class="overlay"></div>
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=cover" alt="Guarda-corpo de Vidro Exterior">
+    </div>
+    <div class="g-item">
+      <div class="overlay"></div>
+      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=600&auto=format&fit=cover" alt="Cobertura Metálica">
+    </div>
+    <div class="g-item">
+      <div class="overlay"></div>
+      <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600&auto=format&fit=cover" alt="Box de Banheiro de Vidro">
+    </div>
+    <div class="g-item wide">
+      <div class="overlay"></div>
+      <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=600&auto=format&fit=cover" alt="Portão Automático de Alumínio">
+    </div>
   </div>
-
-  <h2 class="section-title">
-    RESULTADOS QUE IMPRESSIONAM
-  </h2>
-
-  <div class="gallery">
-
-    <!-- COLE AQUI SUAS IMAGENS DO POSTIMG -->
-
-    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop">
-
-    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop">
-
-    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop">
-
-    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop">
-
-  </div>
-
 </section>
 
-<!-- CONTATO -->
-
-<section class="section" id="contato" style="background:#0d1824;">
-
-  <div class="section-label">
-    CONTATO
-  </div>
-
-  <h2 class="section-title">
-    FALE COM A NOSSA EQUIPE
-  </h2>
-
-  <div class="contact-box">
-
-    <div class="contact-card">
-      <h4>WhatsApp</h4>
-      <p>
-        (21) 96422-9902
-      </p>
+<section class="info-band">
+  <div class="info-item">
+    <div class="ico">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
     </div>
-
-    <div class="contact-card">
-      <h4>Endereço</h4>
-      <p>
-        R. Noronha Torrezão, 104<br>
-        Santa Rosa, Niterói - RJ<br>
-        CEP: 24240-182
-      </p>
+    <div>
+      <div class="label">Qualidade Garantida</div>
+      <div class="value">Materiais de Alta Resistência</div>
     </div>
-
   </div>
-
+  <div class="info-item">
+    <div class="ico">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+    </div>
+    <div>
+      <div class="label">Pontualidade</div>
+      <div class="value">Entrega no Prazo Acordado</div>
+    </div>
+  </div>
+  <div class="info-item">
+    <div class="ico">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+    </div>
+    <div>
+      <div class="label">Satisfação</div>
+      <div class="value">Mais de 500 Clientes Felizes</div>
+    </div>
+  </div>
 </section>
 
-<!-- CTA FINAL -->
-
-<section class="cta">
-
-  <h2>
-    SEU PROJETO MERECE<br>
-    UM ACABAMENTO PREMIUM
-  </h2>
-
-  <p>
-    Atendimento rápido, materiais de qualidade e instalação especializada.
-    Solicite agora seu orçamento e transforme seu ambiente com elegância e segurança.
-  </p>
-
-  <a href="https://wa.me/5521964229902" target="_blank">
-    FALAR NO WHATSAPP
+<section class="cta-section">
+  <span class="section-label">Solicite um Orçamento</span>
+  <h2 class="section-title">Pronto para Iniciar o seu Projeto?</h2>
+  <p>Fale diretamente com a nossa equipa técnica pelo WhatsApp. Atendimento rápido e envio de propostas sem compromisso.</p>
+  <a href="https://wa.me/5521999999999" class="cta-btn-big" target="_blank">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.742.002-2.596-1.008-5.036-2.844-6.874-1.836-1.837-4.279-2.846-6.88-2.847-5.44 0-9.863 4.373-9.867 9.743-.001 1.745.477 3.444 1.385 4.91l-.988 3.605 3.738-.967zM17.34 14.54c-.292-.144-1.728-.842-1.995-.938-.266-.097-.46-.144-.654.144-.194.288-.753.938-.923 1.13-.17.192-.34.216-.632.072-.292-.144-1.233-.448-2.35-1.432-.869-.765-1.456-1.71-1.626-2.001-.17-.291-.018-.448.128-.591.131-.13.292-.336.438-.504.146-.168.194-.288.292-.48.098-.192.049-.36-.024-.504-.074-.144-.654-1.554-.895-2.13-.236-.56-.474-.485-.654-.494-.17-.008-.364-.01-.559-.01-.194 0-.51.072-.777.36-.266.289-1.02.984-1.02 2.4 0 1.416 1.045 2.784 1.191 2.976.146.192 2.057 3.102 4.982 4.343.696.295 1.239.472 1.663.605.699.22 1.336.19 1.84.114.56-.084 1.728-.696 1.972-1.368.243-.672.243-1.25.17-1.368-.073-.118-.266-.192-.559-.336z"/></svg>
+    Conversar no WhatsApp
   </a>
-
+  <a href="tel:+5521999999999" class="phone-big">(21) 99999-9999</a>
 </section>
 
 <footer>
-  © 2026 Serralheria & Vidraçaria Bom Pastor — Todos os direitos reservados.
+  <div class="brand">Serralheria & Vidraçaria Bom Pastor</div>
+  <p>&copy; 2026 Todos os direitos reservados. Niterói - RJ.</p>
+  <img src="logo.png" alt="Bom Pastor">
 </footer>
 
 </body>
 </html>
-```
-
----
-
-# COMO USAR SUA LOGO
-
-Salve sua logo com o nome:
-
-```bash
-logo.png
-```
-
-Na mesma pasta do index.html.
-
----
-
-# COMO USAR SUAS IMAGENS DO POSTIMG
-
-No lugar das imagens do Unsplash, cole os links diretos do Postimg.
-
-Exemplo:
-
-```html
-<img src="https://i.postimg.cc/xxxx/foto.jpg">
-```
-
-Você pode substituir todas as imagens da galeria e da hero section.
